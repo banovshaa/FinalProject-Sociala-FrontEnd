@@ -1,0 +1,127 @@
+@import '_common.scss';
+.logoIcon{
+    width: 36px;
+    margin-right: .5rem;
+    vertical-align: bottom;
+}
+#logo{
+    font-family: $font-secondary!important;
+    font-weight: 600;
+    font-size: 32px;
+    color: $color-blue;
+}
+.header-lr-all{
+    position: fixed;
+    width: 100%;
+    padding: 1.5rem 0;
+   .btn-login{
+    @include common-btn($color-dark);
+   }
+   .btn-register{
+    @include common-btn($color-blue);
+   }
+}
+.header-all{
+   position: fixed;
+   z-index: 10;
+   background-color: #fff;
+   border-bottom: 2px solid $color-gray;
+   width: 100%;
+   padding: 1.5rem 0;
+   .searchForm{
+       position: relative;
+       i{
+           position: absolute;
+           left: 16px;
+           top: 16px;
+           color: #CED4D9;
+       }
+       .searchInput{
+           outline: 0;
+           background-color: $color-gray;
+           width: 350px;
+           line-height: 32px;
+           font-size: 14px;
+           }
+   }
+   .navMiddle{
+       width: 50px;
+       height: 50px;
+       border-radius: 100%;
+       background-color: $color-gray;
+       display: inline-flex;
+       justify-content: center;
+       align-items: center;
+       i{
+           font-size: 22px;
+           color: $color-dark-gray;
+       }
+       .current{
+           color: $color-blue;
+       }
+   }
+   
+   .navRight{
+       margin: 0 1rem;
+       i{
+           font-size: 25px;
+       }
+       .spin{
+           animation: spin 2s infinite linear
+       }
+   }
+   @keyframes spin {
+       from {
+           transform:rotate(0deg);
+       }
+       to {
+           transform:rotate(360deg);
+       }
+   }
+   .notification{
+       position: relative;
+       .notificationDot{
+           position: absolute;
+           background-color: #fe9431;
+           top: -5px;
+           right: -5px;
+           border-radius: 100%;
+           width: 7px;
+           height: 7px;
+           line-height: 15px;
+           font-size: 10px;
+       }
+   }
+   .navrRightMobile{
+       a{
+           margin-left: .4rem;
+           background-color: $color-gray;
+           display:inline-flex;
+           justify-content: center;
+           align-items: center;
+           border-radius: 100%;
+           width: 45px;
+           height: 45px;
+           padding: 8px;
+           i{
+               font-size: 16px;
+               color: $color-dark;
+           }
+       }
+   }
+}
+.footer-all{
+    background-color: $color-blue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    a{
+        padding: 5px;
+        i{
+            color: #fff;
+            font-size: 22px;
+        }
+    }
+ }

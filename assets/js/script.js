@@ -26,6 +26,7 @@ $(document).ready(function(){
     });
     $('.users-slider').slick({
         dots: false,
+        arrows:false,
         infinite: false,
         speed: 300,
         slidesToShow: 4,
@@ -56,4 +57,38 @@ $(document).ready(function(){
           }
         ]
       });
+    $('.shop-slider').slick({
+        dots: true,
+        arrows:true,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+              
   });

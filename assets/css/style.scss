@@ -1,44 +1,8 @@
 @import '_variables.scss';
 @import '_reset.scss';
+@import '_static.scss';
+@import '_common.scss';
 
-@mixin common-btn($back_color)
-{
-    width: 100px;
-    padding: 16px;
-    margin-left: 8px;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $back_color;
-}
-.logoIcon{
-    width: 36px;
-    margin-right: .5rem;
-   vertical-align: bottom;
-}
-#logo{
-    font-family: $font-secondary!important;
-    font-weight: 600;
-    font-size: 32px;
-    color: $color-blue;
-}
-.header-lr-all{
-    position: fixed;
-    width: 100%;
-    padding: 1.5rem 0;
-   .btn-login{
-    @include common-btn($color-dark);
-   }
-   .btn-register{
-    @include common-btn($color-blue);
-   }
-
-}
 .login-register-all{
     .card-body{
         h2{
@@ -81,135 +45,134 @@
         }
     }
 }
-
- .header-all{
-    position: fixed;
-    z-index: 10;
-    background-color: #fff;
-    border-bottom: 2px solid $color-gray;
-    width: 100%;
-    padding: 1.5rem 0;
-    .searchForm{
-        position: relative;
-        i{
-            position: absolute;
-            left: 16px;
-            top: 16px;
-            color: #CED4D9;
-        }
-        .searchInput{
-            outline: 0;
-            background-color: $color-gray;
-            width: 350px;
-            line-height: 32px;
-            font-size: 14px;
-            }
-    }
-    .navMiddle{
-        width: 50px;
-        height: 50px;
-        border-radius: 100%;
-        background-color: $color-gray;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        i{
-            font-size: 22px;
-            color: $color-dark-gray;
-        }
-        .current{
-            color: $color-blue;
-        }
-    }
-    
-    .navRight{
-        margin: 0 1rem;
-        i{
-            font-size: 25px;
-        }
-        .spin{
-            animation: spin 2s infinite linear
-        }
-    }
-    @keyframes spin {
-        from {
-            transform:rotate(0deg);
-        }
-        to {
-            transform:rotate(360deg);
-        }
-    }
-    .notification{
-        position: relative;
-        .notificationDot{
-            position: absolute;
-            background-color: #fe9431;
-            top: -5px;
-            right: -5px;
-            border-radius: 100%;
-            width: 7px;
-            height: 7px;
-            line-height: 15px;
-            font-size: 10px;
-        }
-    }
-    .navrRightMobile{
-        a{
-            margin-left: .4rem;
-            background-color: $color-gray;
-            display:inline-flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            width: 45px;
-            height: 45px;
-            padding: 8px;
-            i{
-                font-size: 16px;
-                color: $color-dark;
-            }
-        }
-    }
- }
- .not-found-all{
+.not-found-all{
     background-color: #FEFEFE;
     padding: 8rem 0 6rem;
+    margin-bottom: -36px;
     h1{
-        font-weight: 700;
-        font-size: 50px;
-        font-family: $font-third;
+        @include common-text(50px,#000,700);
     }
     p{
-        color: $color-dark-gray;
-        font-size: 14px;
+        @include common-text(14px,$color-dark-gray,400);
         margin: .5rem 0 2rem;
-        font-family: $font-third;
     }
     a{
-        font-size: 12px;
+        @include common-text(12px,$color-light,400);
         letter-spacing: 1px;
         background-color:$color-blue;
         border-radius:.3rem;
-        font-weight: 600;
         text-align: center;
-        color: $color-light;
-        font-family: $font-third;
     }
  }
- .footer-all{
-    background-color: $color-blue;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    margin-top: -34px;
-    a{
-        padding: 5px;
-        i{
-            color: #fff;
-            font-size: 22px;
+
+.card{
+    box-shadow: 0 8px 30px rgba(0,0,0,.05);
+    h4{
+        @include common-text(12px,$color-dark,700);
+        line-height: 1.2;
+        span{
+            color: $color-dark-gray;
         }
     }
- }
+    p, span{
+        @include common-text(12px,$color-dark-gray,500);
+        line-height: 26px;
+    }
+    a{
+        @include common-text(12px,$color-blue,500);
+    }
+    .followUser{
+        @include common-btn2(#fff,$color-green);
+        @include common-text(10px,#fff,700);
+    }
+    .confirmUser{
+        @include common-btn2(#fff,$color-blue);
+    }
+    .deleteUser{
+        @include common-btn2(#fff,$color-dark-gray);
+    }
+    .img-count{
+        width: 100%;
+        height: 100%;
+        color: $color-light;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.6);
+        border-radius: 5px;
+        text-align: center;
+       b{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @include common-text(20px,#fff,600);
+       }
+    }
+    .emoji-buttons, span{
+        @include common-text(12px,$color-dark,600);
+        line-height: 26px;
+        i{
+            color: #fff;
+            font-size: 16px;
+            width: 25px;
+            height: 25px;
+            @extend .circle-bg ;
+            &:first-child{
+                background-color: $color-blue;
+            }
+            &:last-child{
+                background-color: red;
+            }
+        }
+    }
+}
+.card-mind{
+    .cm-create {
+       color:$color-dark-gray!important;
+        i{
+            color: $color-blue;
+            background-color: $color-gray;
+            width: 35px;
+            height: 35px;
+            font-size: 18px;
+            @extend .circle-bg;
+        }
+    }
+    textarea{
+        @include common-text(12px,$color-dark-gray, 500);
+        border: 2px $color-light solid;
+        border-radius: 15px;
+        outline: none;
+    }
+    .cm-bottom{
+        i{
+            font-size: 22px;
+        }
+        span{
+            @include common-text(12px,$color-dark, 600);
+            letter-spacing: .4px;
+        }
+    }
+}
+.card.events{
+    h4{
+      span{
+        @include common-text(10px,$color-dark-gray,600);
+      }
+    }
+    .date{
+        text-align: center;
+        @include common-text(25px,#fff,700);
+        letter-spacing: 1px;
+        span{
+            display: block;
+            @include common-text(14px,#fff,600);
+            letter-spacing: .4px;
+        }
+        
+    }
+}
  .home-all{
     background-color:#FBFCFE;
     .owl-item{
@@ -218,7 +181,11 @@
     .owl-nav{
         display: none!important;
     }
+    .slick-dots{
+        display: none!important;
+    }
     .home-body{
+        padding: 7rem 90px;
         .item{
             width: 125px;
             height: 200px;
@@ -237,119 +204,109 @@
                          i{
                             width: 100%;
                             height: 100%;
-                        color: $color-blue!important;
+                            color: $color-blue!important;
                     }
                     }
                    
                 }
             }
         }
+    }
+ }
+ .shop-all{
+    padding: 7rem 0;
+    .slick-dots{
+        bottom: 20px;
+        li{
+            border: 1.75px solid rgba(0, 0, 0, .8);
+           border-radius: 100%;
+           padding: 10px;
+        }
+    }
+    .slick-arrow{
+        &::before{
+            font-size: 22px;
+            background-color:#fff;
+            @extend .circle-bg; 
+            width: 50px;
+            height: 50px;
+            color: #000;
+            opacity: .5;
+        }
+    }
+    .slick-prev{
+        left: 10px;
+        z-index: 9;
+        &::before{
+            content: "";
+            font-family: 'FontAwesome';
+        }
+    }
+    .slick-next{
+        right: 40px;
+        z-index: 9;
+        &::before{
+            content: "";
+            font-family: 'FontAwesome';
+        }
+    }
+    .shop-slider-body{
+        border-radius: .3rem;
+        box-shadow: 0 8px 30px rgba(0,0,0,.05);
         .card{
-            a, h4 p, span, textarea{
-                font-family: $font-third!important;
-            }
-            .card-body{
-                h4{
-                    font-weight: 700;
-                    color:$color-dark;
-                    font-size: 12px;
-                    line-height: 1.2;
-                    font-family: $font-third!important;
-                }
-                p, span{
-                    font-size: 12px;
-                    font-weight: 500;
-                    color:$color-dark-gray;
-                    font-family: $font-third!important;
-                    line-height: 26px;
-                }
-                .follow{
-                    background-color: $color-green;
-                    font-weight: 700;
-                    color: #fff;
-                    font-size: 10px;
-                    letter-spacing: 1px;
-                    font-family: $font-third;
-                }
-                .img-count{
-                    width: 100%;
-                    height: 100%;
-                    color: $color-light;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    background: rgba(0,0,0,.6);
-                    border-radius: 5px;
-                    text-align: center;
-                   b{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                    font-weight: 600;
-                    font-size: 20px;
-                    font-family: $font-third!important;
-                   }
-                }
-                .emoji-buttons, span{
-                    font-weight: 600;
-                    color:$color-dark;
-                    line-height: 26px;
-                    font-size: 12px;
-                    i{
-                        color: #fff;
-                        font-size: 16px;
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        &:first-child{
-                            background-color: $color-blue;
-                        }
-                        &:last-child{
-                            background-color: red;
-                        }
-                    }
+            box-shadow: none;
+            background-color: transparent;
+            h2{
+                @include common-text(44px,#000,300);
+                b{
+                    @include common-text(44px,#000,700);
                 }
             }
-        }
-        .card-mind{
-            .cm-create {
+            .shop-btn{
+                @include common-btn2(#fff,$color-blue);
                 font-weight: 600;
-                font-size: 12px;
-                color: $color-dark-gray;
-                i{
-                    color: $color-blue;
-                    background-color: $color-gray;
-                    width: 35px;
-                    height: 35px;
-                    font-size: 18px;
-                    border-radius: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-            textarea{
-                font-weight: 500;
-                color: $color-dark-gray;
-                font-size:12px;
-                border: 2px $color-light solid;
-                border-radius: 15px;
-                outline: none;
-            }
-            .cm-bottom{
-                span{
-                    font-size: 12px;
-                    font-weight: 600;
-                    color: $color-dark;
-                    letter-spacing: .4px;
-                }
+                width: 150px;
             }
         }
-
+    }
+    .shop-product{
+        box-shadow: none;
+        .card-image{
+            background-color: $color-gray;
+        }
+        .star{
+            color: #FFCA10;
+            font-size: 14px;
+        }
+        h2{
+           a{
+            @include common-text(14px, #000,700);
+           } 
+        }
+        h6{
+            @include common-text(14px, $color-dark-gray,600);
+        }
+       
+    }
+ }
+ .pagination{
+    ul{
+        display: flex;
+        li{
+            margin: 0 .4rem;
+            border: 1.5px solid $color-dark-gray;
+            @extend .circle-bg;
+            width: 35px;
+            height: 35px;
+            a{
+                color: $color-dark-gray;
+            }
+        }
+        .active{
+            background: $color-dark-gray;
+            border:$color-dark-gray;
+            color: #fff;
+        }
     }
  }
  @media (max-width:1200px) {
@@ -359,7 +316,8 @@
  }
  @media (min-width:992px) {
     .footer-all{
-        display: none;
+        opacity: 0;
+        visibility: hidden;
     }
  }
  @media (max-width:992px) {
@@ -394,6 +352,10 @@
    .header-all{
     padding: 12px 0;
    }
+   .home-body{
+    padding: 7rem 0!important;
+    
+}
  }
  @media (max-width:768px) {
     .login-register-all{
@@ -401,12 +363,18 @@
             width: 80%;
         }
     }
-    .footer-all{
-        margin-top: 14px;
+    .not-found-all{
+        margin-bottom: 12px;
     }
  }
  @media (max-width:576px) {
-    .footer-all{
-        margin-top: 0px;
+    .not-found-all{
+        margin-bottom: -9px;
+    }
+    .cm-bottom{
+        span{
+            display: none!important;
+        }
+        
     }
  }

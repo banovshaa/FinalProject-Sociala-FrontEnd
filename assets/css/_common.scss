@@ -1,0 +1,38 @@
+.circle-bg{
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin common-text($text_size,$text_color,$text_weight){
+    font-size: $text_size;
+    font-weight: $text_weight;
+    color: $text_color;
+    font-family: $font-third;
+}
+@mixin common-btn($back_color)
+{
+    width: 100px;
+    padding: 16px;
+    margin-left: 8px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $back_color;
+}
+@mixin common-btn2($color,$back_color)
+{
+    display: inline-block;
+    text-align: center;
+    letter-spacing: .4px;
+    border-radius: 30px;
+    width: 100px;
+    cursor: pointer;
+    color: $color;
+    background-color: $back_color;
+}

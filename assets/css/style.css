@@ -27,6 +27,13 @@ input {
   -webkit-appearance: none;
 }
 
+.circle-bg, .pagination ul li, .shop-all .slick-arrow::before, .card-mind .cm-create i, .card .emoji-buttons i, .card span i {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logoIcon {
   width: 36px;
   margin-right: 0.5rem;
@@ -72,45 +79,6 @@ input {
   align-items: center;
   justify-content: center;
   background-color: #1E74FD;
-}
-
-.login-register-all .card-body h2 {
-  font-weight: 700;
-  font-size: 40px;
-}
-.login-register-all .card-body form {
-  margin: 1rem 0;
-}
-.login-register-all .card-body form .form-group {
-  position: relative;
-}
-.login-register-all .card-body form .form-group i {
-  position: absolute;
-  left: 15px;
-  top: 20px;
-}
-.login-register-all .card-body form .form-group .input1 {
-  height: 60px;
-  border: 2px #EEEEEE solid;
-  font-weight: 500;
-  font-size: 14px;
-  padding-left: 40px;
-}
-
-.mobile-lr {
-  display: none;
-}
-.mobile-lr span {
-  color: #343a40;
-  margin: 0 8px;
-}
-.mobile-lr a {
-  color: #343a40;
-  font-weight: 500;
-  transition: 0.5s;
-}
-.mobile-lr a:hover {
-  color: #1E74FD;
 }
 
 .header-all {
@@ -200,38 +168,13 @@ input {
   color: #343a40;
 }
 
-.not-found-all {
-  background-color: #FEFEFE;
-  padding: 8rem 0 6rem;
-}
-.not-found-all h1 {
-  font-weight: 700;
-  font-size: 50px;
-  font-family: "Montserrat", sans-serif;
-}
-.not-found-all p {
-  color: #adb5bd;
-  font-size: 14px;
-  margin: 0.5rem 0 2rem;
-  font-family: "Montserrat", sans-serif;
-}
-.not-found-all a {
-  font-size: 12px;
-  letter-spacing: 1px;
-  background-color: #1E74FD;
-  border-radius: 0.3rem;
-  font-weight: 600;
-  text-align: center;
-  color: #f7f7f7;
-  font-family: "Montserrat", sans-serif;
-}
-
 .footer-all {
   background-color: #1E74FD;
   position: fixed;
+  bottom: 0;
+  left: 0;
   z-index: 10;
   width: 100%;
-  margin-top: -34px;
 }
 .footer-all a {
   padding: 5px;
@@ -239,6 +182,235 @@ input {
 .footer-all a i {
   color: #fff;
   font-size: 22px;
+}
+
+.circle-bg, .pagination ul li, .shop-all .slick-arrow::before, .card-mind .cm-create i, .card .emoji-buttons i, .card span i {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-register-all .card-body h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.login-register-all .card-body form {
+  margin: 1rem 0;
+}
+.login-register-all .card-body form .form-group {
+  position: relative;
+}
+.login-register-all .card-body form .form-group i {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+}
+.login-register-all .card-body form .form-group .input1 {
+  height: 60px;
+  border: 2px #EEEEEE solid;
+  font-weight: 500;
+  font-size: 14px;
+  padding-left: 40px;
+}
+
+.mobile-lr {
+  display: none;
+}
+.mobile-lr span {
+  color: #343a40;
+  margin: 0 8px;
+}
+.mobile-lr a {
+  color: #343a40;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.mobile-lr a:hover {
+  color: #1E74FD;
+}
+
+.not-found-all {
+  background-color: #FEFEFE;
+  padding: 8rem 0 6rem;
+  margin-bottom: -36px;
+}
+.not-found-all h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.not-found-all p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+  margin: 0.5rem 0 2rem;
+}
+.not-found-all a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #f7f7f7;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  background-color: #1E74FD;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.card {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+.card h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #343a40;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+}
+.card h4 span {
+  color: #adb5bd;
+}
+.card p, .card span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+  line-height: 26px;
+}
+.card a {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1E74FD;
+  font-family: "Montserrat", sans-serif;
+}
+.card .followUser {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.4px;
+  border-radius: 30px;
+  width: 100px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #10d876;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.card .confirmUser {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.4px;
+  border-radius: 30px;
+  width: 100px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #1E74FD;
+}
+.card .deleteUser {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.4px;
+  border-radius: 30px;
+  width: 100px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #adb5bd;
+}
+.card .img-count {
+  width: 100%;
+  height: 100%;
+  color: #f7f7f7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  text-align: center;
+}
+.card .img-count b {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.card .emoji-buttons, .card span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #343a40;
+  font-family: "Montserrat", sans-serif;
+  line-height: 26px;
+}
+.card .emoji-buttons i, .card span i {
+  color: #fff;
+  font-size: 16px;
+  width: 25px;
+  height: 25px;
+}
+.card .emoji-buttons i:first-child, .card span i:first-child {
+  background-color: #1E74FD;
+}
+.card .emoji-buttons i:last-child, .card span i:last-child {
+  background-color: red;
+}
+
+.card-mind .cm-create {
+  color: #adb5bd !important;
+}
+.card-mind .cm-create i {
+  color: #1E74FD;
+  background-color: #EEEEEE;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+}
+.card-mind textarea {
+  font-size: 12px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+  border: 2px #f7f7f7 solid;
+  border-radius: 15px;
+  outline: none;
+}
+.card-mind .cm-bottom i {
+  font-size: 22px;
+}
+.card-mind .cm-bottom span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #343a40;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.4px;
+}
+
+.card.events h4 span {
+  font-size: 10px;
+  font-weight: 600;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+}
+.card.events .date {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+.card.events .date span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.4px;
 }
 
 .home-all {
@@ -249,6 +421,12 @@ input {
 }
 .home-all .owl-nav {
   display: none !important;
+}
+.home-all .slick-dots {
+  display: none !important;
+}
+.home-all .home-body {
+  padding: 7rem 90px;
 }
 .home-all .home-body .item {
   width: 125px;
@@ -272,102 +450,113 @@ input {
   height: 100%;
   color: #1E74FD !important;
 }
-.home-all .home-body .card a, .home-all .home-body .card h4 p, .home-all .home-body .card span, .home-all .home-body .card textarea {
-  font-family: "Montserrat", sans-serif !important;
+
+.shop-all {
+  padding: 7rem 0;
 }
-.home-all .home-body .card .card-body h4 {
-  font-weight: 700;
-  color: #343a40;
-  font-size: 12px;
-  line-height: 1.2;
-  font-family: "Montserrat", sans-serif !important;
+.shop-all .slick-dots {
+  bottom: 20px;
 }
-.home-all .home-body .card .card-body p, .home-all .home-body .card .card-body span {
-  font-size: 12px;
-  font-weight: 500;
-  color: #adb5bd;
-  font-family: "Montserrat", sans-serif !important;
-  line-height: 26px;
+.shop-all .slick-dots li {
+  border: 1.75px solid rgba(0, 0, 0, 0.8);
+  border-radius: 100%;
+  padding: 10px;
 }
-.home-all .home-body .card .card-body .follow {
-  background-color: #10d876;
-  font-weight: 700;
-  color: #fff;
-  font-size: 10px;
-  letter-spacing: 1px;
+.shop-all .slick-arrow::before {
+  font-size: 22px;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  color: #000;
+  opacity: 0.5;
+}
+.shop-all .slick-prev {
+  left: 10px;
+  z-index: 9;
+}
+.shop-all .slick-prev::before {
+  content: "\f053";
+  font-family: "FontAwesome";
+}
+.shop-all .slick-next {
+  right: 40px;
+  z-index: 9;
+}
+.shop-all .slick-next::before {
+  content: "\f054";
+  font-family: "FontAwesome";
+}
+.shop-all .shop-slider-body {
+  border-radius: 0.3rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+.shop-all .shop-slider-body .card {
+  box-shadow: none;
+  background-color: transparent;
+}
+.shop-all .shop-slider-body .card h2 {
+  font-size: 44px;
+  font-weight: 300;
+  color: #000;
   font-family: "Montserrat", sans-serif;
 }
-.home-all .home-body .card .card-body .img-count {
-  width: 100%;
-  height: 100%;
-  color: #f7f7f7;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 5px;
+.shop-all .shop-slider-body .card h2 b {
+  font-size: 44px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.shop-all .shop-slider-body .card .shop-btn {
+  display: inline-block;
   text-align: center;
-}
-.home-all .home-body .card .card-body .img-count b {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  font-size: 20px;
-  font-family: "Montserrat", sans-serif !important;
-}
-.home-all .home-body .card .card-body .emoji-buttons, .home-all .home-body .card .card-body span {
-  font-weight: 600;
-  color: #343a40;
-  line-height: 26px;
-  font-size: 12px;
-}
-.home-all .home-body .card .card-body .emoji-buttons i, .home-all .home-body .card .card-body span i {
+  letter-spacing: 0.4px;
+  border-radius: 30px;
+  width: 100px;
+  cursor: pointer;
   color: #fff;
-  font-size: 16px;
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home-all .home-body .card .card-body .emoji-buttons i:first-child, .home-all .home-body .card .card-body span i:first-child {
   background-color: #1E74FD;
-}
-.home-all .home-body .card .card-body .emoji-buttons i:last-child, .home-all .home-body .card .card-body span i:last-child {
-  background-color: red;
-}
-.home-all .home-body .card-mind .cm-create {
   font-weight: 600;
-  font-size: 12px;
-  color: #adb5bd;
+  width: 150px;
 }
-.home-all .home-body .card-mind .cm-create i {
-  color: #1E74FD;
+.shop-all .shop-product {
+  box-shadow: none;
+}
+.shop-all .shop-product .card-image {
   background-color: #EEEEEE;
+}
+.shop-all .shop-product .star {
+  color: #FFCA10;
+  font-size: 14px;
+}
+.shop-all .shop-product h2 a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.shop-all .shop-product h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pagination ul {
+  display: flex;
+}
+.pagination ul li {
+  margin: 0 0.4rem;
+  border: 1.5px solid #adb5bd;
   width: 35px;
   height: 35px;
-  font-size: 18px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.home-all .home-body .card-mind textarea {
-  font-weight: 500;
+.pagination ul li a {
   color: #adb5bd;
-  font-size: 12px;
-  border: 2px #f7f7f7 solid;
-  border-radius: 15px;
-  outline: none;
 }
-.home-all .home-body .card-mind .cm-bottom span {
-  font-size: 12px;
-  font-weight: 600;
-  color: #343a40;
-  letter-spacing: 0.4px;
+.pagination ul .active {
+  background: #adb5bd;
+  border: #adb5bd;
+  color: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -377,7 +566,8 @@ input {
 }
 @media (min-width: 992px) {
   .footer-all {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 @media (max-width: 992px) {
@@ -408,17 +598,23 @@ input {
   .header-all {
     padding: 12px 0;
   }
+  .home-body {
+    padding: 7rem 0 !important;
+  }
 }
 @media (max-width: 768px) {
   .login-register-all .card {
     width: 80%;
   }
-  .footer-all {
-    margin-top: 14px;
+  .not-found-all {
+    margin-bottom: 12px;
   }
 }
 @media (max-width: 576px) {
-  .footer-all {
-    margin-top: 0px;
+  .not-found-all {
+    margin-bottom: -9px;
+  }
+  .cm-bottom span {
+    display: none !important;
   }
 }/*# sourceMappingURL=style.css.map */
