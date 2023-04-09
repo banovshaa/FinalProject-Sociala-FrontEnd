@@ -1,0 +1,100 @@
+.sb-range-slider {
+    height: 5px;
+    background: $color-gray; 
+    border: none;
+    .ui-slider-handle {
+        width: 10px;
+        height: 10px;
+        top: -3px;
+        background: #000;
+        border: 1px solid #000;
+        border-radius: 100%; 
+        &:focus{
+            outline: none;
+        }
+    }
+    .ui-widget-header {
+        background: #000;
+        top: 0;
+        height: 100%; 
+      }
+}
+.slider-price {
+    margin-top: 15px;
+    text-align: center; 
+    p{
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        .btn {
+            width: 100px; 
+        }
+    }
+    input#amount {
+        @include common-text(14px,$color-dark,600);
+        background: transparent;
+        border: transparent;
+        text-align: left;
+        word-spacing: 15px;
+        &:focus {
+            outline: none;
+            -webkit-box-shadow: none;
+            box-shadow: none; 
+        }
+    }
+}
+ .slick-dots{
+    bottom: 20px;
+    li{
+        border: 1.75px solid rgba(0, 0, 0, .8);
+       border-radius: 100%;
+       padding: 10px;
+    }
+}
+.slick-arrow{
+    &::before{
+        font-size: 22px;
+        background-color:#fff;
+        @extend .circle-bg; 
+        width: 50px;
+        height: 50px;
+        color: #000;
+        opacity: .5;
+    }
+}
+.slick-prev{
+    left: 10px;
+    z-index: 9;
+    &::before{
+        content: "";
+        font-family: 'FontAwesome';
+    }
+}
+.slick-next{
+    right: 40px;
+    z-index: 9;
+    &::before{
+        content: "";
+        font-family: 'FontAwesome';
+    }
+}
+.pagination{
+    ul{
+        display: flex;
+        li{
+            margin: 0 .4rem;
+            border: 1.5px solid $color-dark-gray;
+            @extend .circle-bg;
+            width: 35px;
+            height: 35px;
+            a{
+                color: $color-dark-gray;
+            }
+        }
+        .active{
+            background: $color-dark-gray;
+            border:$color-dark-gray;
+            color: #fff;
+        }
+    }
+}
