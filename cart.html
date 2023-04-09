@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sociala</title>
+    <link rel="icon" href="assets/images/logo.svg">
+    <link rel="stylesheet" href="assets/css/bootstrap-extendedv1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="header-all">
+            <div class="container-b">
+                <div class="d-flex align-items-center">
+                    <div class="d-flex">
+                        <a class="d-flex w-280px" href="index.html">
+                            <img class="logoIcon" src="assets/images/logo.svg" alt="logo">
+                            <span id="logo">Sociala. </span>
+                        </a>
+                    </div>
+                    <form action="#" class="header-search">
+                        <div class="form-group searchForm mb-0">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Start typing to search.." class="searchInput py-2 ps-5 pe-3 border-0 rounded-5">
+                        </div>
+                    </form>
+                        <a href="index.html" class="navMiddle mx-3 p-2"><i class="fa-solid fa-house current"></i></a>
+                        <a href="" class="navMiddle p-2 ms-0 me-3 menu-icon"><i class="fa-solid fa-bolt"></i></a>
+                        <a href="" class="navMiddle p-2 ms-0 me-3 menu-icon"><i class="fa-solid fa-video"></i></a>
+                        <a href="" class="navMiddle p-2 ms-0 me-3 menu-icon"><i class="fa-solid fa-bag-shopping"></i></a>
+                        <a href="#" class="navRight notification ms-auto"><span class="notificationDot"></span><i class="fa-regular fa-bell"></i></a>
+                        <a href="#" class="navRight"><i class="fa-regular fa-message"></i></a>
+                        <a href="#" class="navRight"><i class="spin fa-solid fa-gear"></i></a>
+                        <a href="#" class="navRight rounded-circle"><img class="img-fluid w-40px rounded-circle align-bottom" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="user"></a>
+                    <div class="navrRightMobile d-none ms-auto">
+                        <a href="#"><i class="fa-regular fa-comment"></i></a>
+                        <a href="#"><i class="fa-solid fa-video"></i></a>
+                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="cart-all">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mb-3">
+                        <div class="card p-md-5 p-4 bg-primary rounded-3 bg-pattern border-0 overflow-hidden">
+                            <div class="bg-pattern-div"></div>
+                            <h2 class="mb-0 mt-0">Cart 
+                                <span class="mt-2 d-block text-white">4 PRODUCT FOUND</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-9 mb-3">
+                            <div class="table-content table-responsive">
+                                <table class="table text-center product-table">
+                                    <thead class="rounded-3">
+                                        <tr>
+                                            <th class="border-0 p-4">&nbsp;</th>
+                                            <th class="border-0 p-4">Product</th>
+                                            <th class="border-0 p-4">Price</th>
+                                            <th class="border-0 p-4">Quantity</th>
+                                            <th class="border-0 p-4">Total</th>
+                                            <th class="border-0 p-4">&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="align-baseline">
+                                        <tr>
+                                            <td class="text-left ps-0">
+                                                <img src="assets/images/products/pl8.png" alt="Product Thumnail" class="w-75px rounded-3">
+                                            </td>
+                                            <td class="product-headline">
+                                                <h3>
+                                                    <a href="#">Super skinny blazer</a>
+                                                </h3>
+                                            </td>
+                                            <td class="product-p">
+                                                <span class="product-price-wrapper">
+                                                    <span class="money"><span>$</span> 49.00</span>
+                                                </span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="quantity">
+                                                    <a href="#" class="dec qtybutton">-</a>
+                                                    <span>1</span>
+                                                    <a href="#" class="inc qtybutton">+</a>
+                                                </div>
+                                            </td>
+                                            <td class="product-total-price">
+                                                <span class="product-price-wrapper">
+                                                    <span class="money fmont"><strong><span>$ </span>49.00</strong></span>
+                                                </span>
+                                            </td>
+                                            <td class="product-remove"><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left ps-0">
+                                                <img src="assets/images/products/pp-11.png" alt="Product Thumnail" class="w-75px rounded-3">
+                                            </td>
+                                            <td class="product-headline">
+                                                <h3>
+                                                    <a href="#">Super skinny blazer</a>
+                                                </h3>
+                                            </td>
+                                            <td class="product-p">
+                                                <span class="product-price-wrapper">
+                                                    <span class="money"><span>$</span> 49.00</span>
+                                                </span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="quantity">
+                                                    <a href="#" class="dec qtybutton">-</a>
+                                                    <span>1</span>
+                                                    <a href="#" class="inc qtybutton">+</a>
+                                                </div>
+                                            </td>
+                                            <td class="product-total-price">
+                                                <span class="product-price-wrapper">
+                                                    <span class="money fmont"><strong><span>$ </span>49.00</strong></span>
+                                                </span>
+                                            </td>
+                                            <td class="product-remove"><a href="#"><i class="fa-solid fa-trash-can"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="checkout-payment card border-0 mb-3 p-4">
+                                <div class="cart-totals">
+                                    <h4>Cart totals</h4>
+                                    <div class="table-content table-responsive">
+                                        <table class="table order-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tr-left">Subtotal</td>
+                                                    <td><span>$196.00</span></td>  
+                                                </tr>
+                                                <tr>
+                                                    <td class="tr-left">Shipping</td>
+                                                    <td>
+                                                        <span>Flat rate: $20.00</span>
+                                                    </td>  
+                                                </tr>
+                                                <tr class="order-total">
+                                                    <td class="tr-left">Total</td>
+                                                    <td>
+                                                        <span class="product-price-wrapper">
+                                                            <span class="money fmont">$226.00</span>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <a href="#" class="btn btn-dark w-100 py-3">Proceed To Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-all">
+            <div class="container-b">
+                <div class="d-flex justify-content-between align-items-center py-4px">
+                    <a href=""><i class="fa-solid fa-house"></i></a>
+                    <a href=""><i class="fa-solid fa-cube"></i></a>
+                    <a href=""><i class="fa-solid fa-table-cells-large"></i></a>
+                    <a href=""><i class="fa-solid fa-layer-group"></i></a>
+                    <a href="#" class="rounded-circle">
+                        <img class="img-fluid w-40px rounded-circle" 
+                        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="user"></a> 
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>    
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
+</body>
+</html>

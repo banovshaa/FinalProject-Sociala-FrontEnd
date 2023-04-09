@@ -116,6 +116,20 @@
     color: #FFCA10;
     font-size: 14px;
 }
+.quantity{
+    border: 1px solid #000;
+    width: 98px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span{
+        font-size: 18px;
+    }
+    a{
+        @include common-text(18px,#000,500);
+    }
+}
 .login-register-all{
     .card-body{
         h2{
@@ -335,18 +349,116 @@
         background-color:#D5D8D9; 
         @include common-text(18px,#fff,500);
     }
-    .quantity{
-        border: 1px solid #000;
-        width: 98px;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        span{
-            font-size: 18px;
+}
+.cart-all{
+    padding: 7rem 0;
+    .bg-pattern{
+        &::before{
+            content: "";
+            position: absolute;
+            top: 90px;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 0 80px 80px 80px;
+            background-color: #fff;
+            opacity: .3;
         }
-        a{
-            @include common-text(18px,#000,500);
+        .bg-pattern-div{
+            &::before{
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-radius: 80px;
+                right: 83px;
+                top: 8px;
+                background-color: #fff;
+                opacity: .3;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                top: 90px;
+                right: 83px;
+                background-color: #fff;
+                border-radius: 80px 80px 80px 0;
+                opacity: .3;
+            }
+        }
+        h2{
+            @include common-text(46px,#fff,700);
+            &::after{
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-radius: 80px;
+                right: 0;
+                top: 8px;
+                background-color: #fff;
+                opacity: .3;
+            }
+        }
+    }
+    .product-table{
+        thead{
+            background-color: #f6f7fc;
+        }
+        th, .fmont{
+            @include common-text(16px,#515184,700);
+        }
+        tbody{
+            .product-headline{
+                a{
+                    @include common-text(14px, #000, 600);
+                }
+            }
+            .product-p{
+                .product-price-wrapper{
+                    .money{
+                        @include common-text(14px,$color-dark-gray,700);
+                        span{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            .product-quantity{
+                .quantity{
+                    border-color: $color-gray;
+                    padding: 5px;
+                    span{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .product-remove{
+                i{
+                    color: $color-dark-gray;
+                }
+            }
+        }
+    }
+    .checkout-payment{
+        background-color: #f6f7fc;
+        .cart-totals{
+            h4{
+                @include common-text(22px,#000,600);
+            }
+            .order-table{
+               margin-top: 48px;
+                .tr-left{
+                    @include common-text(14px,#515184,600);
+                }
+                td{
+                    span{
+                        @include common-text(12px,$color-dark,600);
+                    }
+                }
+            }
         }
     }
 }
