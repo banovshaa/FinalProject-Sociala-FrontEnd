@@ -471,6 +471,87 @@ input {
   font-family: "Montserrat", sans-serif;
 }
 
+.bg-pattern::before {
+  content: "";
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 0 80px 80px 80px;
+  background-color: #fff;
+  opacity: 0.3;
+}
+.bg-pattern .bg-pattern-div::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  right: 83px;
+  top: 8px;
+  background-color: #fff;
+  opacity: 0.3;
+}
+.bg-pattern .bg-pattern-div::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 90px;
+  right: 83px;
+  background-color: #fff;
+  border-radius: 80px 80px 80px 0;
+  opacity: 0.3;
+}
+.bg-pattern h2 {
+  font-size: 46px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.bg-pattern h2::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  right: 0;
+  top: 8px;
+  background-color: #fff;
+  opacity: 0.3;
+}
+
+.checkout-payment {
+  background-color: #f6f7fc;
+}
+.checkout-payment .cart-totals h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.order-table {
+  margin-top: 48px;
+}
+.order-table .tr-left {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #515184;
+  font-family: "Montserrat", sans-serif;
+}
+.order-table td {
+  text-align: right;
+}
+.order-table td span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+}
+
 .login-register-all .card-body h2 {
   font-weight: 700;
   font-size: 40px;
@@ -734,56 +815,6 @@ input {
 .cart-all {
   padding: 7rem 0;
 }
-.cart-all .bg-pattern::before {
-  content: "";
-  position: absolute;
-  top: 90px;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  border-radius: 0 80px 80px 80px;
-  background-color: #fff;
-  opacity: 0.3;
-}
-.cart-all .bg-pattern .bg-pattern-div::before {
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 80px;
-  right: 83px;
-  top: 8px;
-  background-color: #fff;
-  opacity: 0.3;
-}
-.cart-all .bg-pattern .bg-pattern-div::after {
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  top: 90px;
-  right: 83px;
-  background-color: #fff;
-  border-radius: 80px 80px 80px 0;
-  opacity: 0.3;
-}
-.cart-all .bg-pattern h2 {
-  font-size: 46px;
-  font-weight: 700;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-}
-.cart-all .bg-pattern h2::after {
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 80px;
-  right: 0;
-  top: 8px;
-  background-color: #fff;
-  opacity: 0.3;
-}
 .cart-all .product-table thead {
   background-color: #f6f7fc;
 }
@@ -818,29 +849,115 @@ input {
 .cart-all .product-table tbody .product-remove i {
   color: #adb5bd;
 }
-.cart-all .checkout-payment {
-  background-color: #f6f7fc;
-}
-.cart-all .checkout-payment .cart-totals h4 {
-  font-size: 22px;
-  font-weight: 600;
-  color: #000;
-  font-family: "Montserrat", sans-serif;
-}
-.cart-all .checkout-payment .cart-totals .order-table {
-  margin-top: 48px;
-}
-.cart-all .checkout-payment .cart-totals .order-table .tr-left {
+
+label {
   font-size: 14px;
   font-weight: 600;
   color: #515184;
   font-family: "Montserrat", sans-serif;
 }
-.cart-all .checkout-payment .cart-totals .order-table td span {
-  font-size: 12px;
+
+.checkout-all {
+  padding: 7rem 0;
+}
+.checkout-all h4 {
+  font-size: 22px;
   font-weight: 600;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-all .page-title .form-control {
+  line-height: 50px;
+  height: 50px;
+  font-size: 14px;
+  display: inline-block;
+  border: 2px #eee solid;
+}
+.checkout-all .order-details .table-content {
+  background-color: #F6F7FC;
+}
+.checkout-all .order-details .table-content .order-table2 thead th, .checkout-all .order-details .table-content .order-table2 tfoot th {
+  font-size: 16px;
+  font-weight: 700;
+  color: #515184;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-all .order-details .table-content .order-table2 tbody th, .checkout-all .order-details .table-content .order-table2 tbody td {
+  font-size: 14px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+}
+.checkout-all .order-details .table-content .order-table2 tfoot td, .checkout-all .order-details .table-content .order-table2 tfoot span {
+  font-size: 14px;
+  font-weight: 700;
   color: #343a40;
   font-family: "Montserrat", sans-serif;
+}
+.checkout-all .place-order {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.account-all {
+  padding: 7rem 12rem;
+  background-color: #E8F1FA;
+}
+.account-all h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.account-all .account-details {
+  background-color: #1E74FD;
+}
+.account-all .account-details h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.account-all .account-details i {
+  color: #fff;
+  font-size: 20px;
+}
+.account-all .input-file input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.account-all .input-file label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  border: 2px dashed #ddd;
+}
+.account-all .input-file i {
+  font-size: 42px;
+  display: block;
+}
+.account-all .input-file span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  font-family: "Montserrat", sans-serif;
+}
+.account-all textarea {
+  font-size: 14px;
+  font-weight: 400;
+  color: #515184;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  background-color: rgb(245, 245, 245);
+  border: 2px #eee solid;
 }
 
 @media (max-width: 1200px) {
@@ -906,6 +1023,9 @@ input {
   .single-product-all .single-product-image img {
     width: 900px;
   }
+  .account-all {
+    padding: 7rem 4rem;
+  }
 }
 @media (max-width: 768px) {
   .login-register-all .card {
@@ -921,5 +1041,8 @@ input {
   }
   .cm-bottom span {
     display: none !important;
+  }
+  .account-all {
+    padding: 7rem 0rem;
   }
 }/*# sourceMappingURL=style.css.map */

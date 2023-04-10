@@ -130,6 +130,79 @@
         @include common-text(18px,#000,500);
     }
 }
+.bg-pattern{
+    &::before{
+        content: "";
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 80px;
+        height: 80px;
+        border-radius: 0 80px 80px 80px;
+        background-color: #fff;
+        opacity: .3;
+    }
+    .bg-pattern-div{
+        &::before{
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 80px;
+            right: 83px;
+            top: 8px;
+            background-color: #fff;
+            opacity: .3;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 90px;
+            right: 83px;
+            background-color: #fff;
+            border-radius: 80px 80px 80px 0;
+            opacity: .3;
+        }
+    }
+    h2{
+        @include common-text(46px,#fff,700);
+        &::after{
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 80px;
+            right: 0;
+            top: 8px;
+            background-color: #fff;
+            opacity: .3;
+        }
+    }
+}
+.checkout-payment{
+    background-color: #f6f7fc;
+    .cart-totals{
+        h4{
+            @include common-text(22px,#000,600);
+        }
+        
+    }
+}
+.order-table{
+    margin-top: 48px;
+     .tr-left{
+        text-align: left;
+         @include common-text(14px,#515184,600);
+     }
+     td{
+        text-align: right;
+         span{
+             @include common-text(12px,$color-dark-gray,600);
+         }
+     }
+ }
 .login-register-all{
     .card-body{
         h2{
@@ -191,7 +264,7 @@
         text-align: center;
     }
 }
- .home-all{
+.home-all{
     background-color:#FBFCFE;
     .owl-item{
         width: auto!important;
@@ -231,7 +304,7 @@
         }
     }
  }
- .shop-all{
+.shop-all{
     padding: 7rem 0;
     .shop-slider-body{
         border-radius: .3rem;
@@ -352,57 +425,6 @@
 }
 .cart-all{
     padding: 7rem 0;
-    .bg-pattern{
-        &::before{
-            content: "";
-            position: absolute;
-            top: 90px;
-            right: 0;
-            width: 80px;
-            height: 80px;
-            border-radius: 0 80px 80px 80px;
-            background-color: #fff;
-            opacity: .3;
-        }
-        .bg-pattern-div{
-            &::before{
-                content: "";
-                position: absolute;
-                width: 80px;
-                height: 80px;
-                border-radius: 80px;
-                right: 83px;
-                top: 8px;
-                background-color: #fff;
-                opacity: .3;
-            }
-            &::after{
-                content: "";
-                position: absolute;
-                width: 80px;
-                height: 80px;
-                top: 90px;
-                right: 83px;
-                background-color: #fff;
-                border-radius: 80px 80px 80px 0;
-                opacity: .3;
-            }
-        }
-        h2{
-            @include common-text(46px,#fff,700);
-            &::after{
-                content: "";
-                position: absolute;
-                width: 80px;
-                height: 80px;
-                border-radius: 80px;
-                right: 0;
-                top: 8px;
-                background-color: #fff;
-                opacity: .3;
-            }
-        }
-    }
     .product-table{
         thead{
             background-color: #f6f7fc;
@@ -442,24 +464,94 @@
             }
         }
     }
-    .checkout-payment{
-        background-color: #f6f7fc;
-        .cart-totals{
-            h4{
-                @include common-text(22px,#000,600);
-            }
-            .order-table{
-               margin-top: 48px;
-                .tr-left{
-                    @include common-text(14px,#515184,600);
-                }
-                td{
-                    span{
-                        @include common-text(12px,$color-dark,600);
+}
+label{
+    @include common-text(14px,#515184,600);
+}
+.checkout-all{
+    padding: 7rem 0;
+    h4{
+        @include common-text(22px,#000,600);
+    }
+    .page-title{
+        .form-control {
+            line-height: 50px;
+            height: 50px;
+            font-size: 14px;
+            display: inline-block;
+            border: 2px #eee solid;
+        }
+    }
+    .order-details{
+        .table-content{
+            background-color: #F6F7FC;
+            .order-table2{
+                thead,tfoot{
+                    th{
+                        @include common-text(16px,#515184,700)
                     }
                 }
-            }
+                tbody{
+                    th,td{
+                        @include common-text(14px,$color-dark-gray,500)
+                    }
+                }
+                tfoot{
+                   td, span{
+                    @include common-text(14px,$color-dark,700)
+                   }
+                }
+            } 
         }
+    }
+    .place-order{
+        @include common-text(16px,#fff,600)
+    }
+    
+}
+.account-all{
+    padding: 7rem 12rem;
+    background-color: #E8F1FA;
+    h2{
+        @include common-text(26px, #000,700)
+    }
+    .account-details{
+        background-color: $color-blue;
+        h4{
+            @include common-text(18px, #fff,600)
+        }
+        i{
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+    .input-file{
+        input{
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        label{
+            @include common-text(14px, #555,600);
+            cursor: pointer;
+            border: 2px dashed #ddd;
+        }
+        i{
+            font-size: 42px;
+            display: block;
+        }
+        span{
+            @include common-text(14px, #555,600);
+        }
+    }
+    textarea{
+        @include common-text(14px, #515184,400);
+        outline: none;
+        background-color: rgb(245, 245, 245);
+        border: 2px #eee solid;
     }
 }
  //Media Responsive
@@ -544,6 +636,9 @@
         }
     }
    }
+   .account-all{
+    padding: 7rem 4rem;
+   }
  }
  @media (max-width:768px) {
     .login-register-all{
@@ -564,4 +659,7 @@
             display: none!important;
         }
     }
+    .account-all{
+        padding: 7rem 0rem;
+       }
  }
