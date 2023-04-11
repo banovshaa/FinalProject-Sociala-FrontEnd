@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css" integrity="sha512-yU7+yXTc4VUanLSjkZq+buQN3afNA4j2ap/mxvdr440P5aW9np9vIr2JMZ2E5DuYeC9bAoH9CuCR7SJlXAa4pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -131,18 +132,21 @@
                               </div>
                         </div>
                         <div class="card card-mind w-100 rounded-5 border-0 px-4 pt-4 pb-3 my-3">
-                            <div class="card-body p-0">
-                                <a href="#" class="cm-create card-body p-0 d-flex align-items-center"><i class="me-2 fa-regular fa-pen-to-square"></i>Create Post</a>
-                            </div>
-                            <div class="card-body p-0 mt-3 position-relative">
-                                <span class="avatar position-absolute ms-2 mt-1 top-5"><img src="assets/images/users/user-2.png" alt="user" class="img-fluid rounded-circle w-30px"></span>
-                                <textarea class="h-100px w-100prcnt p-2 ps-5" name="message" class="" cols="30" rows="10" placeholder="What's on your mind?"></textarea>
-                            </div>
-                            <div class="card-body cm-bottom d-flex p-0 mt-0">
-                                <a href="#" class="d-flex align-items-center  pe-4"><i class="fa-solid fa-video text-danger me-2"></i><span>Live Video</span></a>
-                                <a href="#" class="d-flex align-items-center  pe-4"><i class="fa-regular fa-image text-success me-2"></i><span>Photo/Video</span></a>
-                                <a href="#" class="d-flex align-items-center  pe-4"><i class="fa-solid fa-camera text-warning me-2"></i><span>Feeling/Activity</span></a>                                
-                            </div>
+                            <form action="">
+                                <div class="card-body p-0">
+                                    <button type="submit" class="cm-create card-body p-0 d-flex align-items-center"><i class="me-2 fa-regular fa-pen-to-square"></i>Create Post</button>
+                                </div>
+                                <div class="card-body p-0 mt-3 position-relative">
+                                    <span class="avatar position-absolute ms-2 mt-1 top-5"><img src="assets/images/users/user-2.png" alt="user" class="img-fluid rounded-circle w-30px"></span>
+                                    <textarea class="h-100px w-100prcnt p-2 ps-5" name="message" class="" cols="30" rows="10" placeholder="What's on your mind?"></textarea>
+                                </div>
+                                <div class="card-body cm-bottom p-0 mt-0">
+                                    <a href="#" class="d-flex align-items-center pe-4 photoShareBtn"><i class="fa-regular fa-image text-success me-2"></i><span>Photo/Video</span></a>
+                                    <div class="photoShare my-3 d-none">
+                                        <input class="form-control w-40prcnt" type="file" id="">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                         <div class="card w-100 bg-transparent border-0 p-0 my-3">
                             <div class="users-slider">
@@ -320,6 +324,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>    
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script type="module" src="assets/js/plugin.js"></script>
     <script type="module" src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/autocomplete.js"></script>
 </body>
 </html>

@@ -98,3 +98,32 @@
         }
     }
 }
+.autocomplete{
+    position: relative;
+}
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid $color-gray;
+    border-bottom: none;
+    border-top: none;
+    z-index: 8;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height:200px;
+    overflow-y:scroll;
+    div {
+        @include common-text(14px,#000,500);
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff; 
+        border-bottom: 1px solid $color-gray;
+        &:hover {
+            background-color:$color-light;
+          }
+      }
+}
+.autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff !important; 
+}

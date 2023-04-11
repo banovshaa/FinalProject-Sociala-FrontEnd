@@ -41,7 +41,7 @@
            background-color: $color-gray;
            width: 350px;
            line-height: 32px;
-           font-size: 14px;
+           @include common-text(12px, $color-dark-gray,500);
            }
    }
    .navMiddle{

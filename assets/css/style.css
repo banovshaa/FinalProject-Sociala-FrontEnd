@@ -27,7 +27,7 @@ input {
   -webkit-appearance: none;
 }
 
-.circle-bg, .single-product-all .add-to-w-detail, .card-mind .cm-create i, .card .emoji-buttons i, .card span i, .pagination ul li, .slick-arrow::before {
+.circle-bg, .single-message-all .chat-form .micro, .notification-all .chat-wrapper .notification-box li a i, .notification-all .chat-wrapper h2 a, .settings-all li i.icon, .single-product-all .add-to-w-detail, .card-mind .cm-create i, .card .emoji-buttons i, .card span i, .pagination ul li, .slick-arrow::before {
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -103,7 +103,10 @@ input {
   background-color: #EEEEEE;
   width: 350px;
   line-height: 32px;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
 }
 .header-all .navMiddle {
   width: 50px;
@@ -184,7 +187,7 @@ input {
   font-size: 22px;
 }
 
-.circle-bg, .single-product-all .add-to-w-detail, .card-mind .cm-create i, .card .emoji-buttons i, .card span i, .pagination ul li, .slick-arrow::before {
+.circle-bg, .single-message-all .chat-form .micro, .notification-all .chat-wrapper .notification-box li a i, .notification-all .chat-wrapper h2 a, .settings-all li i.icon, .single-product-all .add-to-w-detail, .card-mind .cm-create i, .card .emoji-buttons i, .card span i, .pagination ul li, .slick-arrow::before {
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -294,6 +297,41 @@ input {
   color: #fff;
 }
 
+.autocomplete {
+  position: relative;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #EEEEEE;
+  border-bottom: none;
+  border-top: none;
+  z-index: 8;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 200px;
+  overflow-y: scroll;
+}
+.autocomplete-items div {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #EEEEEE;
+}
+.autocomplete-items div:hover {
+  background-color: #f7f7f7;
+}
+
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff !important;
+}
+
 .card {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 }
@@ -395,8 +433,20 @@ input {
   background-color: red;
 }
 
+.card-mind .photoShare input {
+  font-size: 12px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+}
 .card-mind .cm-create {
-  color: #adb5bd !important;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
 }
 .card-mind .cm-create i {
   color: #1E74FD;
@@ -520,6 +570,17 @@ input {
   top: 8px;
   background-color: #fff;
   opacity: 0.3;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #515184;
+  font-family: "Montserrat", sans-serif;
+}
+
+.unreadMsg {
+  background-color: #e8f1fa;
 }
 
 .checkout-payment {
@@ -850,13 +911,6 @@ input {
   color: #adb5bd;
 }
 
-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #515184;
-  font-family: "Montserrat", sans-serif;
-}
-
 .checkout-all {
   padding: 7rem 0;
 }
@@ -960,6 +1014,214 @@ label {
   border: 2px #eee solid;
 }
 
+.settings-all {
+  background-color: #E8F1FA;
+  padding: 7rem 12rem 1rem;
+}
+.settings-all h4:first-child {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.settings-all li h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.settings-all li i.icon {
+  width: 45px;
+  height: 45px;
+  color: #fff;
+  font-size: 22px;
+  margin-right: 16px;
+}
+.settings-all li .fa-chevron-right {
+  color: #adb5bd;
+  font-size: 14px;
+}
+.settings-all li .fa-house-user {
+  background: linear-gradient(135deg, #05f, #09f);
+}
+.settings-all li .fa-location-dot {
+  background: linear-gradient(to right, #f2994a, #f2c94c);
+}
+.settings-all li .fa-key {
+  background: linear-gradient(to right, #e44d26, #f16529);
+}
+.settings-all li .fa-bell {
+  background: linear-gradient(to right, #ee0979, #ff6a00);
+}
+.settings-all li .fa-right-from-bracket {
+  background: linear-gradient(to right, #6a47f6, #8743ac);
+}
+
+.notification-all {
+  padding: 7rem 12rem;
+}
+.notification-all .chat-wrapper h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.notification-all .chat-wrapper h2 .circle-count {
+  background-color: #fe9431;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+.notification-all .chat-wrapper h2 a {
+  width: 35px;
+  height: 35px;
+  background-color: #EEEEEE;
+  color: #adb5bd;
+}
+.notification-all .chat-wrapper h2 a i {
+  font-size: 16px;
+}
+.notification-all .chat-wrapper .notification-box li {
+  position: relative;
+}
+.notification-all .chat-wrapper .notification-box li a i {
+  position: absolute;
+  top: 40px;
+  left: 45px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+.notification-all .chat-wrapper .notification-box li a .fa-heart {
+  background: linear-gradient(to right, #e44d26, #f16529);
+}
+.notification-all .chat-wrapper .notification-box li a .fa-thumbs-up {
+  background: linear-gradient(135deg, #05f, #09f);
+}
+.notification-all .chat-wrapper .notification-box li a .fa-message {
+  background: linear-gradient(to right, #ee0979, #ff6a00);
+}
+.notification-all .chat-wrapper .notification-box li a h6 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.notification-all .chat-wrapper .notification-box li a h6 strong {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.single-message-all {
+  padding: 7rem 0;
+}
+.single-message-all .chat-body .messages-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.single-message-all .chat-body .messages-content .message-item .message-user {
+  display: flex;
+  align-items: center;
+}
+.single-message-all .chat-body .messages-content .message-item .message-user .avatar {
+  width: 50px;
+  height: 40px;
+  margin-right: 10px;
+}
+.single-message-all .chat-body .messages-content .message-item .message-user .avatar img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.single-message-all .chat-body .messages-content .message-item .message-user h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.single-message-all .chat-body .messages-content .message-item .message-user .time {
+  font-size: 11px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+}
+.single-message-all .chat-body .messages-content .message-item .message-user .bi-check-all {
+  color: #1E74FD;
+  font-size: 18px;
+}
+.single-message-all .chat-body .messages-content .message-item .message-wrap {
+  padding: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  background-color: #E7EDFF;
+  border-radius: 10px;
+}
+.single-message-all .chat-body .messages-content .message-item.outgoing-message {
+  margin: 0 5px 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.single-message-all .chat-body .messages-content .message-item.outgoing-message .message-wrap {
+  background: #1E74FD;
+  color: #fff;
+}
+.single-message-all .chat-body .messages-content .send-imageMsg {
+  width: 40%;
+}
+.single-message-all .chat-form .micro {
+  width: 40px;
+  height: 40px;
+  background-color: #EEEEEE;
+  outline: none;
+  border: none;
+}
+.single-message-all .chat-form .micro i {
+  color: #343a40;
+}
+.single-message-all .chat-form input {
+  width: 100%;
+  border: 0;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ddd;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 15px;
+  line-height: 40px;
+  background: #EDF2FF;
+}
+
+.friends-all {
+  padding: 7rem 0;
+}
+.friends-all .search-form {
+  position: relative;
+}
+.friends-all .search-form input {
+  font-size: 14px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+  background-color: #EEEEEE;
+  padding: 12px 12px 12px 20px;
+}
+.friends-all .search-form i {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 16px;
+  color: #adb5bd;
+}
+
 @media (max-width: 1200px) {
   .navMiddle {
     display: none !important;
@@ -1023,7 +1285,7 @@ label {
   .single-product-all .single-product-image img {
     width: 900px;
   }
-  .account-all {
+  .account-all, .settings-all, .notification-all {
     padding: 7rem 4rem;
   }
 }
@@ -1042,7 +1304,10 @@ label {
   .cm-bottom span {
     display: none !important;
   }
-  .account-all {
+  .account-all, .settings-all, .notification-all {
     padding: 7rem 0rem;
+  }
+  .single-message-all .message-wrap {
+    width: 70%;
   }
 }/*# sourceMappingURL=style.css.map */
