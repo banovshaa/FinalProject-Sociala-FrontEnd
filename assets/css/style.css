@@ -27,7 +27,7 @@ input {
   -webkit-appearance: none;
 }
 
-.circle-bg, .single-message-all .chat-form .micro, .notification-all .chat-wrapper .notification-box li a i, .notification-all .chat-wrapper h2 a, .settings-all li i.icon, .single-product-all .add-to-w-detail, .card-mind .cm-create i, .card .emoji-buttons i, .card span i, .pagination ul li, .slick-arrow::before {
+.circle-bg, .user-page-all .card-body .user-action i, .author-page-all .card-body .user-action i, .single-message-all .chat-form .micro, .notification-all .chat-wrapper .notification-box li a i, .notification-all .chat-wrapper h2 a, .settings-all li i.icon, .single-product-all .add-to-w-detail, .card-mind .cm-create i, .card .emoji-buttons i, .card span i, .pagination ul li, .slick-arrow::before {
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -187,7 +187,7 @@ input {
   font-size: 22px;
 }
 
-.circle-bg, .single-message-all .chat-form .micro, .notification-all .chat-wrapper .notification-box li a i, .notification-all .chat-wrapper h2 a, .settings-all li i.icon, .single-product-all .add-to-w-detail, .card-mind .cm-create i, .card .emoji-buttons i, .card span i, .pagination ul li, .slick-arrow::before {
+.circle-bg, .user-page-all .card-body .user-action i, .author-page-all .card-body .user-action i, .single-message-all .chat-form .micro, .notification-all .chat-wrapper .notification-box li a i, .notification-all .chat-wrapper h2 a, .settings-all li i.icon, .single-product-all .add-to-w-detail, .card-mind .cm-create i, .card .emoji-buttons i, .card span i, .pagination ul li, .slick-arrow::before {
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -1200,6 +1200,44 @@ label {
   background: #EDF2FF;
 }
 
+.message-box-all {
+  padding: 7rem 0 3rem;
+}
+.message-box-all .chat-wrapper {
+  height: 600px;
+  overflow-y: scroll;
+}
+.message-box-all .chat-wrapper .email-message li a {
+  padding: 20px;
+}
+.message-box-all .chat-wrapper .email-message li a .email-user {
+  display: flex;
+  align-items: center;
+}
+.message-box-all .chat-wrapper .email-message li a .email-user h6 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.message-box-all .chat-wrapper .email-message li a .email-subject {
+  font-size: 12px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0.5rem;
+}
+.message-box-all .chat-wrapper .email-message li a .email-text, .message-box-all .chat-wrapper .email-message li a .email-time {
+  font-size: 12px;
+  font-weight: 600;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+}
+.message-box-all .chat-wrapper .email-message li a .email-file i {
+  color: #adb5bd;
+  background-color: transparent;
+}
+
 .friends-all {
   padding: 7rem 0;
 }
@@ -1220,6 +1258,85 @@ label {
   right: 15px;
   font-size: 16px;
   color: #adb5bd;
+}
+
+.event-all {
+  padding: 7rem 0;
+}
+.event-all .card-image {
+  overflow: hidden;
+}
+.event-all .card-image img {
+  transition: 0.6s ease;
+}
+.event-all .card-image:hover img {
+  transform: scale(1.1);
+}
+.event-all .card-body h4 {
+  border: 2px #f1f1f1 solid;
+  background: #EEEEEE;
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.event-all .card-body h4 span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+}
+.event-all .card-body h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.user-page-all, .author-page-all {
+  padding: 7rem 0;
+}
+.user-page-all .photos-body, .user-page-all .events-body, .author-page-all .photos-body, .author-page-all .events-body {
+  height: 300px;
+  overflow-y: scroll;
+}
+.user-page-all .card-body .user-name, .author-page-all .card-body .user-name {
+  padding-left: 150px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.user-page-all .card-body .user-action, .author-page-all .card-body .user-action {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.user-page-all .card-body .user-action i, .author-page-all .card-body .user-action i {
+  border-radius: 4.8px;
+  width: 50px;
+  height: 50px;
+  background-color: #EEEEEE;
+  font-size: 22px;
+  color: #000;
+}
+.user-page-all .card-body .user-action p b, .author-page-all .card-body .user-action p b {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.user-page-all .user-action2 {
+  position: absolute;
+  right: 180px;
+  top: 10px;
+}
+.user-page-all .user-action2 p b {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 1200px) {
@@ -1295,6 +1412,15 @@ label {
   }
   .not-found-all {
     margin-bottom: 12px;
+  }
+  .message-box-all a .form-check, .message-box-all a .email-subject {
+    display: none;
+  }
+  .message-box-all a .email-user {
+    margin-right: 0.5rem;
+  }
+  .message-box-all a div:last-child {
+    flex-direction: column;
   }
 }
 @media (max-width: 576px) {

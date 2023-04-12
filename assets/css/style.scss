@@ -740,6 +740,40 @@ label{
         }
     }
 } 
+.message-box-all{
+    padding: 7rem 0 3rem;
+    .chat-wrapper{
+        height: 600px;
+        overflow-y: scroll;
+        .email-message{
+            li{
+                a{
+                    padding: 20px;
+                    .email-user{
+                        display: flex;
+                        align-items: center;
+                        h6{
+                            @include common-text(12px,#000,700);
+                        }
+                    }
+                    .email-subject{
+                        @include common-text(12px,#000,600);
+                        margin: 0 .5rem ;
+                    }
+                    .email-text, .email-time{
+                        @include common-text(12px,$color-dark-gray,600);
+                    }
+                    .email-file{
+                        i{
+                            color: $color-dark-gray;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 .friends-all{
     padding: 7rem 0;
     .search-form{
@@ -755,6 +789,79 @@ label{
             right: 15px;
             font-size: 16px;
             color:$color-dark-gray;
+        }
+    }
+}
+.event-all{
+    padding:7rem 0;
+    .card-image{
+        overflow: hidden;
+        img{
+            transition: .6s ease;
+
+        }
+        &:hover{
+            img{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .card-body{
+        h4{
+            border: 2px #f1f1f1 solid;
+            background: $color-gray;
+            @include common-text(25px, #000,700);
+            span{
+                @include common-text(14px, $color-dark-gray,500);
+            }
+        }   
+        h2{
+            @include common-text(16px, #000,700);
+        }
+    }
+
+}
+.user-page-all, .author-page-all{
+    padding: 7rem 0;
+    .photos-body, .events-body{
+        height: 300px;
+        overflow-y: scroll;
+    }
+    .card-body{
+        .user-name{
+            padding-left: 150px;
+            @include common-text(20px,#000,700);
+        }
+        .user-action{
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            i{
+                @extend .circle-bg;
+                border-radius: 4.8px;
+                width: 50px;
+                height: 50px;
+                background-color: $color-gray;
+                font-size: 22px;
+                color: #000;
+            }
+            p{
+                b{
+                    @include common-text(18px,#000,700);
+                }
+            }
+        }
+    }
+}
+.user-page-all{
+    .user-action2{
+        position: absolute;
+        right: 180px;
+        top: 10px;
+        p{
+            b{
+                @include common-text(18px,#000,700);
+            }
         }
     }
 }
@@ -851,6 +958,21 @@ label{
     }
     .not-found-all{
         margin-bottom: 12px;
+    }
+    .message-box-all{
+        a{
+            .form-check, .email-subject{
+                display: none;
+            }
+            .email-user{
+                margin-right: .5rem;
+            }
+            div{
+                &:last-child{
+                    flex-direction: column;
+                }
+            }
+        }
     }
  }
  @media (max-width:576px) {
