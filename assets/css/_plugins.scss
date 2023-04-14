@@ -1,8 +1,13 @@
 .sb-range-slider {
+    position: relative;
     height: 5px;
     background: $color-gray; 
     border: none;
+    .ui-slider-range{
+        position: absolute;
+    }
     .ui-slider-handle {
+        position: absolute;
         width: 10px;
         height: 10px;
         top: -3px;
@@ -43,7 +48,7 @@
         }
     }
 }
- .slick-dots{
+.slick-dots{
     bottom: 20px;
     li{
         border: 1.75px solid rgba(0, 0, 0, .8);

@@ -1,29 +1,4 @@
 $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
-        items:5,
-        loop:true,
-        dots:false,
-        video:true,
-        responsiveClass:true,
-        autoplay:true,
-        autoplayTimeout:6000,
-        infinite:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:3,
-            nav:false
-        },
-        1000:{
-            items:5,
-            nav:true,
-            loop:false
-        }
-    }
-    });
     $('.users-slider').slick({
         dots: false,
         arrows:false,

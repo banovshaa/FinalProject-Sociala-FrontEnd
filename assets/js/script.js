@@ -17,5 +17,8 @@ $(document).ready(function(){
         e.preventDefault();
         $(this).parent().html('<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Morbi nulla dolor, ornare at commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa sed rhoncus <a href="#" class="see-more ms-2">See more</a></p>');
     })
-    
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+      })
 })

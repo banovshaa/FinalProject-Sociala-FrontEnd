@@ -12,6 +12,9 @@
         span{
             color: $color-dark-gray;
         }
+        a{
+            @include common-text(12px,$color-dark,700);
+        }
     }
     p, span{
         @include common-text(12px,$color-dark-gray,500);
@@ -57,12 +60,7 @@
             width: 25px;
             height: 25px;
             @extend .circle-bg ;
-            &:first-child{
-                background-color: $color-blue;
-            }
-            &:last-child{
-                background-color: red;
-            }
+            background-color: red;
         }
     }
 }
@@ -280,12 +278,6 @@ label{
 }
 .home-all{
     background-color:#FBFCFE;
-    .owl-item{
-        width: auto!important;
-    }
-    .owl-nav{
-        display: none!important;
-    }
     .slick-dots{
         display: none!important;
     }
@@ -404,7 +396,7 @@ label{
         text-decoration: line-through;
         margin: 0 8px;
     }
- }
+}
 .single-product-all{
     padding:7rem 0;
     .product-title{
@@ -437,7 +429,7 @@ label{
         @include common-text(18px,#fff,500);
     }
 }
-.cart-all{
+.cart-all, .wishlist-all{
     padding: 7rem 0;
     .product-table{
         thead{
@@ -865,6 +857,42 @@ label{
         }
     }
 }
+.single-post-all{
+    padding: 7rem 12rem 1rem;
+    .user-img{
+       height: 100%;
+       img{
+        width: 100%;
+        height: 100%;
+       object-fit: contain;
+       }
+    }
+    .add-comment{
+        form{
+            position: relative;
+            input{
+                @include common-text(12px,#000 ,500);
+                width: 100%;
+                padding: .25rem;
+                outline: none;
+                border: 0;
+            }
+            button{
+                outline: none;
+                @include common-text(10px,$color-blue ,600);
+                position: absolute;
+                right: 20px;
+                top: 0;
+            }
+        }
+    }
+    .comments{
+       ul{
+        height: 400px;
+        overflow-y: scroll;
+       }
+    }
+}
  //Media Responsive
  @media (max-width:1200px) {
     .navMiddle{
@@ -946,8 +974,15 @@ label{
         }
     }
    }
-   .account-all, .settings-all, .notification-all{
+   .account-all, .settings-all, .notification-all,.single-post-all{
     padding: 7rem 4rem;
+   }
+   .single-post-all{
+    .comments{
+        ul{
+            height: 200px;
+        }
+    }
    }
  }
  @media (max-width:768px) {
@@ -984,7 +1019,7 @@ label{
             display: none!important;
         }
     }
-    .account-all, .settings-all, .notification-all{
+    .account-all, .settings-all, .notification-all,.single-post-all{
         padding: 7rem 0rem;
     }
     .single-message-all{
