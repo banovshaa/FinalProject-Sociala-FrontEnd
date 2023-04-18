@@ -790,7 +790,9 @@ label{
         overflow: hidden;
         img{
             transition: .6s ease;
-
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
         }
         &:hover{
             img{
@@ -891,6 +893,43 @@ label{
         height: 400px;
         overflow-y: scroll;
        }
+    }
+}
+.help-all{
+    padding: 7rem 0;
+    .help-top{
+
+       .card-body{
+        h2{
+            @include common-text(44px,#fff,700)
+        }
+        p{
+            @include common-text(14px,#fff,400)
+        }
+        .icon-input{
+            position: relative;
+            i{
+                position: absolute;
+                left: 15px;
+                top: 19px;
+                color: $color-gray;
+                font-size: 18px;
+            }
+            input{
+                height: 55px;
+                width: 100%;
+                @include common-text(14px,$color-dark-gray,500);
+                outline:none;
+                border: none;
+            }   
+        }
+        .help-search{
+            @include common-text(12px,#fff,600);
+            height: 55px;
+            text-transform: uppercase;
+        }
+       }
+      
     }
 }
  //Media Responsive

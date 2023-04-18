@@ -325,6 +325,8 @@ input {
 .pagination ul .active {
   background: #adb5bd;
   border: #adb5bd;
+}
+.pagination ul .active a {
   color: #fff;
 }
 
@@ -361,6 +363,55 @@ input {
 .autocomplete-active {
   background-color: DodgerBlue !important;
   color: #ffffff !important;
+}
+
+.acc-container {
+  width: 100%;
+}
+.acc-container .acc {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+.acc-container .acc .acc-head {
+  text-decoration: underline;
+  padding: 20px 30px;
+  position: relative;
+  cursor: pointer;
+}
+.acc-container .acc .acc-head::before, .acc-container .acc .acc-head::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-color: #adb5bd;
+  transition: all 0.3s;
+}
+.acc-container .acc .acc-head::before {
+  right: 30px;
+  width: 3px;
+  height: 20px;
+  margin-top: -10px;
+}
+.acc-container .acc .acc-head::after {
+  right: 21px;
+  width: 20px;
+  height: 3px;
+  margin-top: -2px;
+}
+.acc-container .acc .acc-head p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.acc-container .acc .acc-head.active {
+  text-decoration: none;
+}
+.acc-container .acc .acc-head.active:before {
+  transform: rotate(90deg);
+}
+.acc-container .acc .acc-content {
+  padding: 20px 30px;
+  display: none;
 }
 
 .card {
@@ -1294,6 +1345,10 @@ label {
 }
 .event-all .card-image img {
   transition: 0.6s ease;
+  width: 100%;
+  height: 190px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .event-all .card-image:hover img {
   transform: scale(1.1);
@@ -1403,6 +1458,50 @@ label {
 .single-post-all .comments ul {
   height: 400px;
   overflow-y: scroll;
+}
+
+.help-all {
+  padding: 7rem 0;
+}
+.help-all .help-top .card-body h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.help-all .help-top .card-body p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.help-all .help-top .card-body .icon-input {
+  position: relative;
+}
+.help-all .help-top .card-body .icon-input i {
+  position: absolute;
+  left: 15px;
+  top: 19px;
+  color: #EEEEEE;
+  font-size: 18px;
+}
+.help-all .help-top .card-body .icon-input input {
+  height: 55px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #adb5bd;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border: none;
+}
+.help-all .help-top .card-body .help-search {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  height: 55px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1200px) {
