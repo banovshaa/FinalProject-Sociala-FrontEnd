@@ -949,6 +949,61 @@ label {
   color: #fff;
   font-family: "Montserrat", sans-serif;
 }
+.single-product-all .review-wrapper h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.single-product-all .review-wrapper h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #343a40;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem 0;
+}
+.single-product-all .review-wrapper h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #343a40;
+  font-family: "Montserrat", sans-serif;
+}
+.single-product-all .review-wrapper .rating-row p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #343a40;
+  font-family: "Montserrat", sans-serif;
+}
+.single-product-all .review-wrapper .rating-row .rating-box {
+  display: inline-block;
+}
+.single-product-all .review-wrapper .rating-row .rating-box .rating-container {
+  direction: rtl !important;
+}
+.single-product-all .review-wrapper .rating-row .rating-box .rating-container label {
+  display: inline-block;
+  margin: 10px 0;
+  color: #d4d4d4;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+.single-product-all .review-wrapper .rating-row .rating-box .rating-container input {
+  display: none;
+}
+.single-product-all .review-wrapper .rating-row .rating-box .rating-container label:hover, .single-product-all .review-wrapper .rating-row .rating-box .rating-container label:hover ~ label, .single-product-all .review-wrapper .rating-row .rating-box .rating-container input:checked ~ label {
+  color: #FFCA10;
+}
+.single-product-all .review-wrapper .review-form .form-group {
+  font-size: 12px;
+  font-weight: 400;
+  color: #343a40;
+  font-family: "Montserrat", sans-serif;
+}
+.single-product-all .review-wrapper .review-form .form-group label {
+  margin: 8px 0;
+}
 
 .cart-all, .wishlist-all {
   padding: 7rem 0;

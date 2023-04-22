@@ -82,5 +82,7 @@ $(document).ready(function(){
         }
     });
     $("#amount").val("£" + $(".sb-range-slider").slider("values", 0) +
-        " - £" + $(".sb-range-slider").slider("values", 1));   
+        " - £" + $(".sb-range-slider").slider("values", 1)); 
+  
+        
 });

@@ -428,6 +428,56 @@ label{
         background-color:#D5D8D9; 
         @include common-text(18px,#fff,500);
     }
+   .review-wrapper{
+        h2{
+            @include common-text(32px,#000,600);
+            text-align: center;
+        }
+        h3{
+            @include common-text(18px,$color-dark,500);
+            margin: 1rem 0;
+        }
+        h4{
+            @include common-text(14px,$color-dark,500);
+        }
+        .rating-row{
+            p{
+                @include common-text(14px,$color-dark,500);
+            }
+            .rating-box {
+                display: inline-block;
+                .rating-container {
+                  direction: rtl !important;
+                  label {
+                    display: inline-block;
+                    margin: 10px 0;
+                    color: #d4d4d4;
+                    cursor: pointer;
+                    font-size: 20px;
+                    transition: color 0.2s;
+                  }
+                  input {
+                    display: none;
+                  }
+                  label:hover, label:hover ~ label, input:checked ~ label  {
+                    color: #FFCA10;
+                  }
+                }
+              }
+              
+        }
+        
+        .review-form{
+            .form-group{
+                @include common-text(12px,$color-dark,400);
+                label{
+                    margin: 8px 0;
+                }
+            }
+            
+        }
+        
+    }
 }
 .cart-all, .wishlist-all{
     padding: 7rem 0;
